@@ -1,10 +1,14 @@
-// app.ts
-App<IAppOption>({
-  globalData: {},
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+App({
+  globalData: {
+    userInfo: null,
+    role: null
   },
-})
+  
+  onLaunch() {
+    // 读取本地存储的角色信息
+    const role = wx.getStorageSync('userRole')
+    if (role) {
+      this.globalData.role = role
+    }
+  }
+}) 

@@ -1,0 +1,31 @@
+<view class="role-container {{selectedRole ? selectedRole + '-bg' : ''}}">
+  <view class="role-header">
+    <view class="title">选择角色</view>
+  </view>
+
+  <view class="role-list">
+    <view 
+      wx:for="{{roles}}" 
+      wx:key="id"
+      class="role-card {{selectedRole === item.id ? 'selected' : ''}} {{selectedRole === item.id ? item.id : ''}}"
+      data-role="{{item.id}}"
+      bindtap="selectRole"
+    >
+      <view class="role-content">
+        <view class="role-info">
+          <view class="role-name">{{item.name}}</view>
+          <view class="role-features">
+            <view wx:for="{{item.features}}" wx:key="*this" class="feature-item">
+              <icon class="feature-icon" type="success" size="14" color="{{selectedRole === 'programmer' ? '#4CD964' : (selectedRole === 'student' ? '#2196F3' : '#CCCCCC')}}" />
+              <text>{{item}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="run-button {{selectedRole ? 'active ' + selectedRole : ''}}" bindtap="confirmRole">
+    <text class="run-text">RUN</text>
+  </view>
+</view> 
