@@ -4,6 +4,7 @@ Page({
       { 
         id: 'programmer',
         name: '我是程序员',
+        icon: '/images/role/programmer.png',
         features: [
           '我要提供代码讲解',
           '我要提供面试辅导',
@@ -13,6 +14,7 @@ Page({
       { 
         id: 'student',
         name: '我是大学生',
+        icon: '/images/role/student.png',
         features: [
           '我要咨询技术方案',
           '我要寻找代码讲解',

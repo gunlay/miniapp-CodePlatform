@@ -7,18 +7,17 @@
     <view 
       wx:for="{{roles}}" 
       wx:key="id"
-      class="role-card {{selectedRole === item.id ? 'selected' : ''}} {{selectedRole === item.id ? item.id : ''}}"
+      class="role-card {{selectedRole === item.id ? 'selected' : ''}} {{item.id}}"
       data-role="{{item.id}}"
       bindtap="selectRole"
     >
+      <image class="role-icon" src="{{item.icon}}" mode="aspectFit"/>
       <view class="role-content">
-        <view class="role-info">
-          <view class="role-name">{{item.name}}</view>
-          <view class="role-features">
-            <view wx:for="{{item.features}}" wx:key="*this" class="feature-item">
-              <icon class="feature-icon" type="success" size="14" color="{{selectedRole === 'programmer' ? '#4CD964' : (selectedRole === 'student' ? '#2196F3' : '#CCCCCC')}}" />
-              <text>{{item}}</text>
-            </view>
+        <view class="role-name">{{item.name}}</view>
+        <view class="role-features">
+          <view wx:for="{{item.features}}" wx:key="*this" class="feature-item">
+            <icon class="feature-icon" type="success" size="14" color="{{selectedRole === item.id ? '#fff' : '#4CD964'}}"/>
+            <text>{{item}}</text>
           </view>
         </view>
       </view>

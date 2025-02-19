@@ -1,7 +1,7 @@
 .role-container {
   min-height: 100vh;
-  padding: 0 30rpx;
-  padding-top: 120rpx;
+  padding: 40rpx;
+  background: #fff;
   transition: background-color 0.3s;
 }
 
@@ -28,20 +28,18 @@
 }
 
 .role-list {
-  margin-top: 40rpx;
+  margin-top: 60rpx;
 }
 
 .role-card {
-  background: #fff;
-  border-radius: 16rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
   padding: 30rpx;
   margin-bottom: 30rpx;
-  transition: all 0.3s;
-}
-
-.role-content {
   display: flex;
   align-items: flex-start;
+  transition: all 0.3s;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
 }
 
 .role-icon {
@@ -50,7 +48,7 @@
   margin-right: 30rpx;
 }
 
-.role-info {
+.role-content {
   flex: 1;
 }
 
@@ -58,6 +56,7 @@
   font-size: 32rpx;
   font-weight: 500;
   margin-bottom: 20rpx;
+  color: #333;
 }
 
 .role-features {
@@ -75,18 +74,24 @@
   margin-right: 12rpx;
 }
 
-.role-card.selected {
-  border: 2rpx solid transparent;
+/* 程序员卡片样式 */
+.role-card.programmer.selected {
+  background: #4CD964;
 }
 
-.role-card.selected.programmer {
-  background: #E8F5F0;
-  border-color: #4CD964;
+.role-card.programmer.selected .role-name,
+.role-card.programmer.selected .feature-item {
+  color: #fff;
 }
 
-.role-card.selected.student {
-  background: #E1F5FE;
-  border-color: #2196F3;
+/* 学生卡片样式 */
+.role-card.student.selected {
+  background: #2196F3;
+}
+
+.role-card.student.selected .role-name,
+.role-card.student.selected .feature-item {
+  color: #fff;
 }
 
 .run-button {
@@ -98,6 +103,7 @@
   align-items: center;
   justify-content: center;
   margin: 60rpx auto;
+  transition: all 0.3s;
 }
 
 .run-button.active.programmer {
