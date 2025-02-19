@@ -12,7 +12,7 @@ export const checkRole = () => {
   const role = getRoleInfo()
   if (!role) {
     wx.redirectTo({
-      url: '/miniprogram/pages/role/index'
+      url: '/pages/role/index'
     })
     return false
   }

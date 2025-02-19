@@ -2,6 +2,9 @@
   "pages": [
     "pages/role/index",
     "pages/home/index",
+    "pages/discover/index",
+    "pages/create/index",
+    "pages/message/index",
     "pages/profile/index"
   ],
   "window": {
@@ -18,11 +21,33 @@
     "list": [
       {
         "pagePath": "pages/home/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/discover/index",
+        "text": "发现",
+        "iconPath": "images/tabbar/discover.png",
+        "selectedIconPath": "images/tabbar/discover_selected.png"
+      },
+      {
+        "pagePath": "pages/create/index",
+        "text": "新建",
+        "iconPath": "images/tabbar/create.png",
+        "selectedIconPath": "images/tabbar/create_selected.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "iconPath": "images/tabbar/message.png",
+        "selectedIconPath": "images/tabbar/message_selected.png"
       },
       {
         "pagePath": "pages/profile/index",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile_selected.png"
       }
     ]
   }
