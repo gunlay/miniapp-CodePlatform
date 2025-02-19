@@ -1,5 +1,128 @@
 .container {
+  padding: 0 24rpx;
+  background: #F5F7FA;
+  min-height: 100vh;
+}
+
+.search-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24rpx;
+  background: #87CEEB;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.search-input {
+  flex: 1;
+  height: 72rpx;
+  background: #FFFFFF;
+  border-radius: 36rpx;
+  padding: 0 60rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.search-placeholder {
+  color: #999999;
+}
+
+.content-list {
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-column {
+  width: 48%;
+}
+
+.content-item {
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}
+
+.item-image {
+  width: 100%;
+}
+
+.item-info {
   padding: 20rpx;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 16rpx;
+}
+
+.item-price-box {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16rpx;
+}
+
+.price-symbol {
+  font-size: 24rpx;
+  color: #FF6B6B;
+}
+
+.price-value {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+  margin: 0 4rpx;
+}
+
+.price-unit {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.order-count {
+  font-size: 24rpx;
+  color: #999999;
+  margin-left: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  margin-right: 12rpx;
+}
+
+.user-detail {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.user-title {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.verified-badge {
+  font-size: 20rpx;
+  color: #4CD964;
+  border: 1rpx solid #4CD964;
+  padding: 2rpx 8rpx;
+  border-radius: 4rpx;
 }
 
 .title {

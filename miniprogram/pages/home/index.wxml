@@ -1,3 +1,55 @@
 <view class="container">
-  <view class="title">首页</view>
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <icon type="search" size="16" color="#999"/>
+    <input class="search-input" placeholder="Search" placeholder-class="search-placeholder"/>
+  </view>
+
+  <!-- 内容列表 -->
+  <view class="content-list">
+    <view class="content-column">
+      <view class="content-item" wx:for="{{leftList}}" wx:key="id">
+        <image class="item-image" src="{{item.image}}" mode="widthFix"/>
+        <view class="item-info">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-price-box">
+            <text class="price-symbol">¥</text>
+            <text class="price-value">{{item.price}}</text>
+            <text class="price-unit">/h</text>
+            <text class="order-count">{{item.orderCount}}+接单量</text>
+          </view>
+          <view class="user-info">
+            <image class="user-avatar" src="{{item.userAvatar}}" mode="aspectFill"/>
+            <view class="user-detail">
+              <view class="user-name">{{item.userName}}</view>
+              <view class="user-title">{{item.userTitle}}</view>
+            </view>
+            <view class="verified-badge" wx:if="{{item.isVerified}}">已认证</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content-column">
+      <view class="content-item" wx:for="{{rightList}}" wx:key="id">
+        <image class="item-image" src="{{item.image}}" mode="widthFix"/>
+        <view class="item-info">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-price-box">
+            <text class="price-symbol">¥</text>
+            <text class="price-value">{{item.price}}</text>
+            <text class="price-unit">/h</text>
+            <text class="order-count">{{item.orderCount}}+接单量</text>
+          </view>
+          <view class="user-info">
+            <image class="user-avatar" src="{{item.userAvatar}}" mode="aspectFill"/>
+            <view class="user-detail">
+              <view class="user-name">{{item.userName}}</view>
+              <view class="user-title">{{item.userTitle}}</view>
+            </view>
+            <view class="verified-badge" wx:if="{{item.isVerified}}">已认证</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view> 
