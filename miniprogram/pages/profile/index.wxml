@@ -1,3 +1,42 @@
-<view class="container">
-  <view class="title">我的</view>
+<view class="profile-container">
+  <!-- 用户信息区域 -->
+  <view class="user-header">
+    <view class="user-info">
+      <image class="avatar" src="{{userInfo.avatar}}" mode="aspectFill"/>
+      <view class="user-detail">
+        <view class="nickname">{{userInfo.nickname}}</view>
+        <view class="user-id">{{userInfo.userId}}</view>
+      </view>
+    </view>
+    <view class="stats-bar">
+      <view class="stat-item">
+        <view class="stat-value">{{stats.orders}}</view>
+        <view class="stat-label">订单</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-value">{{stats.following}}</view>
+        <view class="stat-label">关注</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-value">{{stats.savings}}元</view>
+        <view class="stat-label">已优惠</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单类型区域 -->
+  <view class="order-types">
+    <view class="order-type-item" wx:for="{{orderTypes}}" wx:key="text">
+      <view class="type-icon">{{item.icon}}</view>
+      <view class="type-text">{{item.text}}</view>
+    </view>
+  </view>
+
+  <!-- 菜单列表 -->
+  <view class="menu-list">
+    <view class="menu-item" wx:for="{{menuItems}}" wx:key="text">
+      <view class="menu-icon">{{item.icon}}</view>
+      <view class="menu-text">{{item.text}}</view>
+    </view>
+  </view>
 </view> 

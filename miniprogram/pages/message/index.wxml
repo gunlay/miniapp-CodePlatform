@@ -1,3 +1,48 @@
-<view class="container">
-  <view class="title">消息</view>
+<view class="message-container">
+  <!-- 顶部分类 -->
+  <view class="category-bar">
+    <view 
+      wx:for="{{categories}}" 
+      wx:key="id"
+      class="category-item {{currentCategory === item.id ? 'active' : ''}}"
+      data-category="{{item.id}}"
+      bindtap="switchCategory"
+    >
+      {{item.name}}
+    </view>
+  </view>
+
+  <!-- 消息列表 -->
+  <view class="message-list">
+    <view 
+      wx:for="{{messages}}" 
+      wx:key="id"
+      class="message-item {{item.unread ? 'unread' : ''}}"
+      wx:if="{{currentCategory === 'all' || currentCategory === item.type}}"
+    >
+      <!-- 系统消息 -->
+      <block wx:if="{{item.type === 'system'}}">
+        <view class="system-icon">
+          <icon type="info" size="24" color="#2196F3"/>
+        </view>
+        <view class="message-content">
+          <view class="message-title">{{item.title}}</view>
+          <view class="message-text">{{item.content}}</view>
+          <view class="message-time">{{item.time}}</view>
+        </view>
+      </block>
+
+      <!-- 聊天消息和订单消息 -->
+      <block wx:else>
+        <image class="user-avatar" src="{{item.avatar}}" mode="aspectFill"/>
+        <view class="message-content">
+          <view class="message-title">{{item.name}}</view>
+          <view class="message-text">{{item.content}}</view>
+          <view class="message-time">{{item.time}}</view>
+        </view>
+      </block>
+
+      <view class="unread-dot" wx:if="{{item.unread}}"></view>
+    </view>
+  </view>
 </view> 
