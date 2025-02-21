@@ -34,5 +34,18 @@ Page({
     // 检查角色
     const { checkRole } = require('../../utils/role')
     checkRole()
+  },
+
+  // 修改跳转路径
+  onItemTap() {
+    wx.navigateTo({
+      url: '/pages/detail/index',  // 使用绝对路径，注意是 /pages 开头
+      success: function() {
+        console.log('Navigation successful')
+      },
+      fail: function(err) {
+        console.error('Navigation failed:', err)
+      }
+    })
   }
 }) 

@@ -1,0 +1,79 @@
+<view class="detail-container">
+  <!-- 顶部导航 -->
+  <view class="nav-bar">
+    <view class="nav-title">详情</view>
+    <view class="nav-actions">
+      <image class="action-icon" src="/images/icons/share.png" mode="aspectFit"/>
+      <image class="action-icon" src="/images/icons/more.png" mode="aspectFit"/>
+    </view>
+  </view>
+
+  <!-- 主图 -->
+  <image class="main-image" src="{{detail.image}}" mode="widthFix"/>
+
+  <!-- 基本信息 -->
+  <view class="info-section">
+    <view class="title">{{detail.title}}</view>
+    <view class="price-box">
+      <text class="price-symbol">¥</text>
+      <text class="price-value">{{detail.price}}</text>
+      <text class="price-unit">/{{detail.duration}}</text>
+      <text class="order-count">{{detail.orderCount}}接单量</text>
+    </view>
+    <view class="user-info">
+      <image class="user-avatar" src="{{detail.userInfo.avatar}}" mode="aspectFill"/>
+      <view class="user-detail">
+        <view class="user-name">{{detail.userInfo.nickname}}</view>
+        <view class="user-title">{{detail.userInfo.title}}</view>
+      </view>
+      <view class="verified-badge" wx:if="{{detail.userInfo.isVerified}}">已认证</view>
+    </view>
+  </view>
+
+  <!-- 服务内容 -->
+  <view class="service-section">
+    <view class="section-title">
+      <text class="emoji">👨‍💻</text>
+      <text>提供的具体服务：</text>
+    </view>
+    <view class="service-content">
+      <view 
+        class="service-item"
+        wx:for="{{detail.services}}"
+        wx:key="*this"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 时间安排 -->
+  <view class="time-section">
+    <view class="section-title">
+      <text class="emoji">⏰</text>
+      <text>空闲的时间：</text>
+    </view>
+    <view class="time-row">
+      <text class="time-label">工作日：</text>
+      <view class="time-tags">
+        <view class="time-tag" wx:for="{{detail.availableTime.workDays}}" wx:key="*this">
+          {{item}}
+        </view>
+      </view>
+    </view>
+    <view class="time-row">
+      <text class="time-label">休息日：</text>
+      <view class="time-tags">
+        <view class="time-tag" wx:for="{{detail.availableTime.restDays}}" wx:key="*this">
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="publish-time">发布时间：{{detail.publishTime}}</view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-buttons">
+    <button class="contact-btn" bindtap="onContactTap">沟通</button>
+    <button class="order-btn" bindtap="onOrderTap">下单</button>
+  </view>
+</view> 

@@ -8,7 +8,12 @@
   <!-- 内容列表 -->
   <view class="content-list">
     <view class="content-column">
-      <view class="content-item" wx:for="{{leftList}}" wx:key="id">
+      <view class="content-item" 
+        wx:for="{{leftList}}" 
+        wx:key="id"
+        bindtap="onItemTap"
+        data-id="{{item.id}}"
+      >
         <image class="item-image" src="{{item.image}}" mode="widthFix"/>
         <view class="item-info">
           <view class="item-title">{{item.title}}</view>
@@ -30,7 +35,12 @@
       </view>
     </view>
     <view class="content-column">
-      <view class="content-item" wx:for="{{rightList}}" wx:key="id">
+      <view class="content-item" 
+        wx:for="{{rightList}}" 
+        wx:key="id"
+        bindtap="onItemTap"
+        data-id="{{item.id}}"
+      >
         <image class="item-image" src="{{item.image}}" mode="widthFix"/>
         <view class="item-info">
           <view class="item-title">{{item.title}}</view>

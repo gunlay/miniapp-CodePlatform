@@ -5,7 +5,8 @@
     "pages/discover/index",
     "pages/create/index",
     "pages/message/index",
-    "pages/profile/index"
+    "pages/profile/index",
+    "pages/detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
