@@ -5,4 +5,167 @@
 .title {
   font-size: 32rpx;
   font-weight: 500;
+}
+
+.create-container {
+  min-height: 100vh;
+  background: #fff;
+  padding-bottom: 120rpx;
+}
+
+.header {
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.upload-section {
+  padding: 30rpx;
+  display: flex;
+  gap: 20rpx;
+}
+
+.upload-item {
+  flex: 1;
+}
+
+.upload-btn {
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus {
+  font-size: 40rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.upload-text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.upload-desc {
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+
+.input-section {
+  padding: 0 30rpx;
+}
+
+.title-input {
+  height: 88rpx;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.content-section {
+  padding: 30rpx;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.emoji {
+  margin-right: 10rpx;
+}
+
+.content-textarea {
+  width: 100%;
+  height: 200rpx;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+
+.price-section, .time-section {
+  padding: 30rpx;
+}
+
+.sub-title {
+  font-size: 26rpx;
+  color: #666;
+  width: 140rpx;
+}
+
+.duration-row, .price-row, .time-row, .date-row {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.duration-list, .price-list, .time-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.duration-item, .price-item, .time-item {
+  padding: 10rpx 30rpx;
+  background: #f8f8f8;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.duration-item.selected, .price-item.selected, .time-item.selected {
+  background: #2196F3;
+  color: #fff;
+}
+
+.date-picker {
+  flex: 1;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  display: flex;
+  gap: 20rpx;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.draft-btn, .publish-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+}
+
+.draft-btn {
+  background: #f8f8f8;
+  color: #666;
+}
+
+.publish-btn {
+  background: #2196F3;
+  color: #fff;
 } 
